@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drv.fitness - Fitness Products</title>
+    <meta name="description" content="drv.fitness - Premium fitness products for every athlete.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+<div id="loader" class="loader"></div>
+<div id="toast" class="toast"></div>
+
+<header>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation">&#9776;</button>
+    <span id="cartIcon" style="cursor:pointer;position:relative;">
+        🛒 <span id="cartCount" style="background:#ffb300;color:#fff;border-radius:50%;padding:2px 7px;font-size:0.8rem;position:absolute;top:-10px;right:-10px;">0</span>
+    </span>
+    <h1 class="brand">drv.fitness</h1>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="wishlist.html">Wishlist</a>
+    </nav>
+</header>
+
+<main>
+<section class="hero">
+    <h2>Unleash Your Potential</h2>
+    <p>Modern fitness gear for every journey. Shop the essentials below!</p>
+    <a href="#products" class="cta">Shop Now</a>
+</section>
+
+<section id="products">
+    <h2>Featured Products</h2>
+    <input type="text" id="searchInput" placeholder="Search products..." style="margin-bottom:1rem;padding:0.5rem;width:100%;max-width:400px;">
+    <div class="product-list" id="productList">
+        <!-- Products will be loaded here by JS -->
+    </div>
+</section>
+</main>
+
+<footer>
+    &copy; 2025 drv.fitness. All rights reserved.
+</footer>
+
+<!-- Product Details Modal -->
+<div class="modal" id="detailsModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeDetails" aria-label="Close details">&times;</span>
+        <h2 id="detailsTitle"></h2>
+        <p id="detailsDesc"></p>
+        <span id="detailsPrice"></span>
+    </div>
+</div>
+
+<!-- Animated Add-to-Cart Feedback -->
+<div class="add-to-cart-anim" id="cartAnim">Added to cart!</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeCart" aria-label="Close cart">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cartList" style="list-style:none;padding:0;"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | drv.fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+<div id="loader" class="loader"></div>
+<div id="toast" class="toast"></div>
+
+<header>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation">&#9776;</button>
+    <span id="cartIcon" style="cursor:pointer;position:relative;">
+        🛒 <span id="cartCount" style="background:#ffb300;color:#fff;border-radius:50%;padding:2px 7px;font-size:0.8rem;position:absolute;top:-10px;right:-10px;">0</span>
+    </span>
+    <h1 class="brand">drv.fitness</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="wishlist.html">Wishlist</a>
+    </nav>
+</header>
+
+<main>
+<section id="products">
+    <h2>All Products</h2>
+    <div class="product-list" id="productList"></div>
+</section>
+</main>
+
+<!-- Product Details Modal -->
+<div class="modal" id="detailsModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeDetails" aria-label="Close details">&times;</span>
+        <img id="detailsImg" src="" alt="" style="width:100%;border-radius:12px;margin-bottom:1rem;">
+        <h2 id="detailsTitle"></h2>
+        <p id="detailsDesc"></p>
+        <span id="detailsPrice"></span>
+    </div>
+</div>
+
+<!-- Animated Add-to-Cart Feedback -->
+<div class="add-to-cart-anim" id="cartAnim">Added to cart!</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeCart" aria-label="Close cart">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cartList" style="list-style:none;padding:0;"></ul>
+    </div>
+</div>
+
+<script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - drv.fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation">&#9776;</button>
+    <h1 class="brand">drv.fitness</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="wishlist.html">Wishlist</a>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Contact Us</h2>
+        <form id="contactForm" autocomplete="off">
+            <label for="contactName">Your Name</label>
+            <input id="contactName" type="text" placeholder="Your Name" required>
+            <label for="contactEmail">Your Email</label>
+            <input id="contactEmail" type="email" placeholder="Your Email" required>
+            <label for="contactMsg">Your Message</label>
+            <textarea id="contactMsg" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+</main>
+<footer>
+    &copy; 2025 drv.fitness. All rights reserved.
+</footer>
+<script>
+document.getElementById('contactForm').onsubmit = function(e) {
+    e.preventDefault();
+    document.getElementById('formMessage').textContent = "Thank you for contacting us! We'll get back to you soon.";
+    this.reset();
+};
+</script>
+</body>
+</html>

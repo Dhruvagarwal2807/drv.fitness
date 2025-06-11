@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | drv.fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+<div id="loader" class="loader"></div>
+<div id="toast" class="toast"></div>
+
+<header>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation">&#9776;</button>
+    <span id="cartIcon" style="cursor:pointer;position:relative;">
+        🛒 <span id="cartCount" style="background:#ffb300;color:#fff;border-radius:50%;padding:2px 7px;font-size:0.8rem;position:absolute;top:-10px;right:-10px;">0</span>
+    </span>
+    <h1 class="brand">drv.fitness</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html" class="active">Cart</a>
+        <a href="wishlist.html">Wishlist</a>
+    </nav>
+</header>
+
+<main>
+<section id="cartSection">
+    <h2>Your Cart</h2>
+    <ul id="cartList" style="list-style:none;padding:0;"></ul>
+</section>
+</main>
+
+<script src="cart.js"></script>
+</body>
+</html>
